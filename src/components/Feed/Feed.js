@@ -3,7 +3,7 @@ import React from 'react'
 function Feed() {
     return (
         <div>
-            <h3>This is a Feed</h3>
+            {/* <h3>This is a Feed</h3> */}
         </div>
     )
 }
