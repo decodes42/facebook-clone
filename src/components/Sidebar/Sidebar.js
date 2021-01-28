@@ -1,15 +1,41 @@
+import { Chat, EmojiFlags, ExpandMoreOutlined, LocalHospital, People, Storefront, VideoLibrary } from '@material-ui/icons';
 import React from 'react'
 import SidebarRow from '../SidebarRow/SidebarRow'
+    import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+    import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
+    import PeopleIcon from '@material-ui/icons/People';
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+
+import ChatIcon from '@material-ui/icons/Chat';
 
 function Sidebar() {
     return (
         <div className="sidebar">
-            <SidebarRow title='pages' />
-        <SidebarRow title='Friends' />
-        <SidebarRow title='Messenger' />
-        <SidebarRow title='Marketplace' />
-        <SidebarRow title='Videos' />
-        <SidebarRow title='Marketplace' />
+            {/* <SidebarRow src={user.photoURL} title={user.displayName} /> */}
+            <SidebarRow
+                Icon={LocalHospitalIcon}
+                title='Information Center' />
+            <SidebarRow
+                Icon={EmojiFlagsIcon}
+                title='pages' />
+            <SidebarRow
+                Icon={PeopleIcon}
+                title='Friends' />
+            <SidebarRow
+                Icon={ChatIcon}
+                title='Messenger' />
+            <SidebarRow
+                Icon={StorefrontIcon}
+                title='Marketplace' />
+            <SidebarRow
+                Icon={VideoLibraryIcon}
+                title='Videos' />
+            <SidebarRow
+                Icon={ExpandMoreIcon}
+                title='Marketplace' />
         </div>
     )
 }
