@@ -18,6 +18,10 @@ function Sidebar() {
         <div className="sidebar">
             {/* <SidebarRow src={user.photoURL} title={user.displayName} /> */}
             <SidebarRow
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYEj0z7stl46rUhkCvWopSB1lbIhNGr5Q-g&usqp=CAU"
+        title="Thor(god of thander)"
+      />
+            <SidebarRow
                 Icon={LocalHospitalIcon}
                 title='Information Center' />
             <SidebarRow
