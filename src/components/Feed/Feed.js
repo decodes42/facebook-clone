@@ -13,13 +13,13 @@ function Feed() {
             <StoryReel />
             <MessageSender />
 
-            <Post
+            {/* <Post
             key={id}
             profilePic={profilePic}
             timestamp={timestamp}
             username={username}
             image={image}
-            />
+            /> */}
         <Post />
         <Post />
         </div>
