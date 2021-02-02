@@ -11,7 +11,7 @@ import Post from '../Post/Post'
 function Feed() {
     const[posts, setPosts] = useState([])
 
-    // Loads Once when feed is udated
+    // Listens to any changes and rerenders when there are changes
     useEffect(() => {
         db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => (
             setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
@@ -25,8 +25,9 @@ function Feed() {
 
             {posts.map(post => (
                 <Post
-                key={post.id}
+                key={post.data.id}
                 profilePic={post.data.profilePic}
+                message={post.data.message}
                 timestamp={post.data.timestamp}
                 username={post.data.username}
                 image={post.data.image}

@@ -8,10 +8,13 @@ import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 
+import db from '../../firebase'
+import firebase from "firebase"
+
 function MessageSender() {
     const [{user}, dispatch] = useStateValue()
     const [input, setInput] = useState('')
-    const [imageUrl, setImageUrl] = useState('')
+    const [imageURL, setImageUrl] = useState('')
 
 
 
@@ -19,6 +22,15 @@ function MessageSender() {
     const handleSubmit = e => {
         // Preventing browser default behavior when enter is hit.
         e.preventDefault();
+
+        // When user hits enter the db will collect the info and posted onto the Post Component inside of Feed
+        db.collection('posts').add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username:user.displayName,
+            image: imageURL
+        })
 
          // Resetting the values when user hits enter
     setInput('');
@@ -35,10 +47,11 @@ function MessageSender() {
                     <input
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
+                    type='text'
                     className="messageSender__input"
                     placeholder={`What's on your mind, ${user.displayName}?`} />
                     <input
-                    value={imageUrl}
+                    value={imageURL}
                     onChange={(e) => setImageUrl(e.target.value)}
                     placeholder="Image URL (Optional)"/>
 
