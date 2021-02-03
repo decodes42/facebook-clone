@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Feed.css'
-import db from '../../firebase'
+import db from '../../../firebase'
 
-import StoryReel from '../StoryReel/StoryReel'
-import MessageSender from '../MessageSender/MessageSender'
-import Post from '../Post/Post'
+import StoryReel from '../Feed/StoryReel/StoryReel'
+import MessageSender from '../Feed/MessageSender/MessageSender'
+import Post from '../Feed/Post/Post'
 
 
 

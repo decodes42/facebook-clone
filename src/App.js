@@ -1,9 +1,10 @@
 
 import './App.css';
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar';
-import Feed from './components/Feed/Feed';
-import Widgets from './components/Widgets/Widgets'
+
+import Header from './components/Dashboard/Header/Header';
+import Sidebar from './components/Dashboard/Sidebar/Sidebar';
+import Feed from './components/Dashboard/Feed/Feed';
+import Widgets from './components/Dashboard/Widgets/Widgets'
 import Login from './components/Login/Login'
 import { useStateValue } from './StateProvider'
 
