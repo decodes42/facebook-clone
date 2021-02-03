@@ -21,6 +21,12 @@ function StoryReel() {
         profileSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZAJ7yBkVC0yyVrP_MYsHtORlMaNztqPet2g&usqp=CAU"
         title="Super Girl"
       />
+
+<Story
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWYEj0z7stl46rUhkCvWopSB1lbIhNGr5Q-g&usqp=CAU"
+        profileSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBZzXxxKRPYeQ9MoTl0qaQ1UhrsEr3Lm5IpA&usqp=CAU"
+        title="Thor(god of thander)"
+      />
         </div>
     )
 }
