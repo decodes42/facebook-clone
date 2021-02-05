@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.css'
 import { auth, provider } from '../../firebase'
-import { Button } from '@material-ui/core'
+import { Button, TextField } from '@material-ui/core'
 import { useStateValue } from '../../StateProvider'
 import { actionTypes } from '../../reducer'
 
@@ -21,6 +21,14 @@ function Login() {
         }).catch((error) => alert(error.message))
     }
 
+    const logIn = () => {
+
+    }
+
+    const signUp = () => {
+
+    }
+
     return (
         <div className='login'>
             <div className="login__logo">
@@ -32,6 +40,20 @@ function Login() {
             <Button type='submit' onClick={signIn}>
                 Sign In
             </Button>
+
+            <form>
+        <TextField className='registarion__form' required id="standard-required" label="Required" defaultValue="Enter your name" />
+        <TextField className='registarion__form' required id="standard-required" label="Required" defaultValue="Enter your email" />
+        <TextField className='registarion__form' required id="standard-required" label="Required" defaultValue="Enter your password" />
+
+        <Button
+        onClick={this.logIn}Login
+        ></Button>
+        <Button
+        onClick={this.signUp}Login
+        ></Button>
+
+        </form>
         </div>
     )
 }
