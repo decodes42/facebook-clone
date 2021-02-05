@@ -1,10 +1,7 @@
 import './App.css';
 
-import Header from './components/Dashboard/Header/Header';
-import Sidebar from './components/Dashboard/Sidebar/Sidebar';
-import Feed from './components/Dashboard/Feed/Feed';
-import Widgets from './components/Dashboard/Widgets/Widgets';
 import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
 import { useStateValue } from './StateProvider';
 
 function App() {
@@ -14,15 +11,9 @@ function App() {
       {!user ? (
         <Login />
       ) : (
-        <>
-          <Header />
-
           <div className='app__body'>
-            <Sidebar />
-            <Feed />
-            <Widgets />
+            <Dashboard />
           </div>
-        </>
       )}
     </div>
   );
