@@ -9,11 +9,12 @@ function App() {
   return (
     <div className='app'>
       {!user ? (
-        <Login />
+        <div className='app__body'>
+        <Dashboard />
+      </div>
+
       ) : (
-          <div className='app__body'>
-            <Dashboard />
-          </div>
+        <Login />
       )}
     </div>
   );

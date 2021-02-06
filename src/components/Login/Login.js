@@ -23,6 +23,16 @@ function Login() {
 
     const logIn = () => {
 
+        // Login in..
+        auth.sendSignInLinkToEmail(provider)
+        .then(result => {
+            dispatch({
+                type: actionTypes.SET_USER,
+                user: result.user
+            })
+
+        }).catch((error) => alert(error.message))
+
     }
 
     const signUp = () => {
