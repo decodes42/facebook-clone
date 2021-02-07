@@ -4,3 +4,10 @@
 .toggle__button:hover > .MuiButton-label{
     color: #2e81f4;;
 }
+.logout > .MuiButton-contained {
+    box-shadow: none;
+   background-color: none;
+
+    position: relative;
+    right: 14px;
+}

@@ -67,7 +67,9 @@ function Toggle() {
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
                     <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    <MenuItem className='logout'>
+                            Logout
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
