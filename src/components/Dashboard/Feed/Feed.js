@@ -12,11 +12,11 @@ function Feed() {
     const[posts, setPosts] = useState([])
 
     // Listens to any changes and rerenders when there are changes
-    useEffect(() => {
-        db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => (
-            setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
-        ))
-    }, [])
+    // useEffect(() => {
+    //     db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => (
+    //         setPosts(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+    //     ))
+    // }, [])
 
     return (
         <div className='feed'>
