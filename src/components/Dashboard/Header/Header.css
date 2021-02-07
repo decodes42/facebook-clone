@@ -33,13 +33,13 @@
     flex: 1;
     justify-content: center;
 }
-.header__option > .MuiSvgIcon-root {
+.header__option > .MuiButton-label {
     color: gray;
 }
-.header__option:hover > .MuiSvgIcon-root {
+.header__option:hover > .MuiButton-label {
     color: #2e81f4;
 }
-.header__option--active > .MuiSvgIcon-root {
+.header__option--active > .MuiButton-label {
     color: #2e81f4;
 }
 .header__option--active {
@@ -67,4 +67,10 @@
 }
 .header__right {
     display: flex;
+}
+.header__right__btn > .MuiButton-label{
+    color: gray;
+}
+.header__right__btn:hover > .MuiButton-label{
+    color: #2e81f4;;
 }

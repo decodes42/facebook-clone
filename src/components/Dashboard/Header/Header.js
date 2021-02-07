@@ -1,6 +1,7 @@
 import React from "react"
 import './Header.css';
 import { useStateValue } from '../../../StateProvider'
+import Toggle from './Toggle/Toggle'
 
 // Icons
 import SearchIcon from '@material-ui/icons/Search';
@@ -9,15 +10,16 @@ import FlagIcon from '@material-ui/icons/Flag';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Avatar, IconButton } from '@material-ui/core';
+
+import { Avatar, Button } from '@material-ui/core';
+// import { set } from "mongoose";
 
 function Header() {
     const [{user}, dispatch] = useStateValue()
+    const [open, setOpen] = useStateValue(false);
 
     return (
         <div className="header">
@@ -29,39 +31,41 @@ function Header() {
                 </div>
             </div>
             <div className="header__center">
-                <div className="header__option header__option--active">
-                    <HomeIcon fontSize="large" />
-                </div>
-                <div className="header__option">
-                    <FlagIcon fontSize="large" />
-                </div>
-                <div className="header__option">
-                    <SubscriptionsIcon fontSize="large" />
-                </div>
-                <div className="header__option">
-                    <StorefrontIcon fontSize="large" />
-                </div>
-                <div className="header__option">
-                    <SupervisedUserCircleIcon fontSize="large" />
-                </div>
+                <Button className="header__option header__option--active"
+                >
+                    <HomeIcon fontSize='large' />
+                </Button>
+                <Button className="header__option">
+                    <FlagIcon  fontSize='large'/>
+                </Button>
+                <Button className="header__option">
+                    <SubscriptionsIcon  fontSize='large'/>
+                </Button>
+                <Button className="header__option">
+                    <StorefrontIcon fontSize='large'/>
+                </Button>
+                <Button className="header__option">
+                    <SupervisedUserCircleIcon fontSize='large' />
+                </Button>
             </div>
             <div className="header__right">
                 <div className="header__info">
                     <Avatar src={user.photoURL} />
                     <h4>{user.displayName}</h4>
+
+                    <Toggle />
                 </div>
-                <IconButton>
-                    <AddIcon />
-                </IconButton>
-                <IconButton>
+
+                <Button className='header__right__btn'>
                     <ForumIcon />
-                </IconButton>
-                <IconButton>
+                </Button>
+                <Button className='header__right__btn'>
                     <NotificationsActiveIcon />
-                </IconButton>
-                <IconButton>
-                    <ExpandMoreIcon />
-                </IconButton>
+                </Button>
+
+
+
+
             </div>
         </div>
     );

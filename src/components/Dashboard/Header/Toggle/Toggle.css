@@ -1,0 +1,6 @@
+.toggle__button > .MuiButton-label{
+    color: gray;
+}
+.toggle__button:hover > .MuiButton-label{
+    color: #2e81f4;;
+}
