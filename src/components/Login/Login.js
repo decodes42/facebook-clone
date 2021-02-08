@@ -5,21 +5,23 @@ import { Button } from '@material-ui/core'
 import { useStateValue } from '../../StateProvider'
 import { actionTypes } from '../../reducer'
 
+import Auth from '../Auth/Auth'
+
 function Login() {
     //  Hook
-    const [state, dispatch] = useStateValue();
+    // const [state, dispatch] = useStateValue();
 
-    const signIn = () => {
-        // Sign in..
-        auth.signInWithPopup(provider)
-        .then(result => {
-            dispatch({
-                type: actionTypes.SET_USER,
-                user: result.user
-            })
+    // const signIn = () => {
+    //     // Sign in..
+    //     auth.signInWithPopup(provider)
+    //     .then(result => {
+    //         dispatch({
+    //             type: actionTypes.SET_USER,
+    //             user: result.user
+    //         })
 
-        }).catch((error) => alert(error.message))
-    }
+    //     }).catch((error) => alert(error.message))
+    // }
 
     return (
         <div className='login'>
@@ -29,9 +31,11 @@ function Login() {
                 <img src="https://www.logo.wine/a/logo/Facebook/Facebook-Logo.wine.svg" alt=""/>
             </div>
 
-            <Button type='submit' onClick={signIn}>
+            {/* <Button type='submit' onClick={signIn}>
                 Sign In
-            </Button>
+            </Button> */}
+
+            <Auth />
         </div>
     )
 }

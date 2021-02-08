@@ -1,11 +1,9 @@
 import './App.css';
 
-import Header from './components/Dashboard/Header/Header';
-import Sidebar from './components/Dashboard/Sidebar/Sidebar';
-import Feed from './components/Dashboard/Feed/Feed';
-import Widgets from './components/Dashboard/Widgets/Widgets';
-import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login'
 import { useStateValue } from './StateProvider';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -15,12 +13,13 @@ function App() {
         <Login />
       ) : (
         <>
-          <Header />
 
           <div className='app__body'>
-            <Sidebar />
-            <Feed />
-            <Widgets />
+          <BrowserRouter>
+          <Switch>
+          <Route path='/Dashboard' exact component={Dashboard}/>
+        </Switch>
+          </BrowserRouter>
           </div>
         </>
       )}
