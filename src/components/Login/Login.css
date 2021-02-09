@@ -4,6 +4,9 @@
     place-items: center;
     height: 100vh;
 }
+.login__title.MuiTypography-h1 {
+    font-size: 3rem;
+}
 .login > button {
     width: 300px;
     background-color: #2e81f4;

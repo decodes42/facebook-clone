@@ -3,9 +3,11 @@
    text-align: center;
 
 }
-.form__title .MuiTypography-h5 {
+
+.form__title.MuiTypography-h5 {
     margin-top: 1rem;
-}
+  }
+
 .auth__inputs {
     padding: 1.5rem 3rem;
 }
