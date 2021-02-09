@@ -29,7 +29,7 @@ function Login() {
         <div className='login'>
             <div className="login__logo">
                 <img src={logo} alt="Dev Space Logo"/>
-                <Typography className ='login__title' variant='h1'>{'devSpace'}</Typography>
+                <Typography className ='login__title' variant='h1'>{'devHub'}</Typography>
 
             </div>
 
