@@ -4,11 +4,8 @@ import {
   Avatar,
   Button,
   Typography,
-  Container,
-  Grid,
   Paper
 } from '@material-ui/core';
-import LockIcon from '@material-ui/icons/Lock';
 
 import Input from './Input';
 
@@ -29,31 +26,28 @@ function Auth() {
       handleShowPassword(false)
   }
   return (
-
-    <Container className='register__form'>
+    <div className='register__form'>
         <Paper elevation={3}>
-        <Avatar>
-          <LockIcon />
-        </Avatar>
-        <Typography variant='h5'>{isSignUp ? 'Sign Up' : 'Sign In'}</Typography>
+        <Typography className ='form__title' variant='h5'>{isSignUp ? 'Sign Up' : 'Sign In'}</Typography>
         <form>
-        <Grid container spacing={2}>
+        <div className='auth__inputs'>
         { isSignUp && (
               <>
+                <div className="name__inputs">
                 <Input
                   name='firstName'
                   label='First Name'
-                  placeholder="First Name"
-                  half
+                  className='name__inputs'
                   handleChange={handleChange}
                   autoFocus
                 />
                 <Input
                   name='lastName'
                   label='Last Name'
-                  half
+                  className='name__inputs'
                   handleChange={handleChange}
                 />
+                </div>
 
 
               </>
@@ -76,34 +70,25 @@ function Auth() {
             {isSignUp && <Input name='confirmPassword' label='Repeat Password'  handleChange={handleChange} type='password'/>}
 
 
-        </Grid>
-        <Button type='submit' color='primary' fullWidth variant='contained' className='signIn__button'>
+        </div>
+        <Button type='submit' className='signIn__button'>
               {isSignUp ? 'Sign Up' : 'Sign In'}
           </Button>
-          <Grid container justify='flex-end'>
-              <Grid item>
-                  <Button fullWidth onClick={switchMode}>
-                      {isSignUp ? 'Already have an account? Sign In' : 'Don/t have an account? Sign Up'}
+          <div>
+              <div>
+                  <Button className='switch__button' onClick={switchMode}>
+                      {isSignUp ? 'Sign In' : 'Create Account'}
                   </Button>
-              </Grid>
-          </Grid>
+              </div>
+          </div>
         </form>
 
         </Paper>
 
 
-    </Container>
-
-
-
-
-
-
-
-
-
-
+    </div>
   );
+
 }
 
 export default Auth;

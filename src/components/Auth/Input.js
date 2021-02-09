@@ -1,11 +1,11 @@
 import React from 'react';
 import './Auth.css'
-import { TextField, Grid, InputAdornment, IconButton } from '@material-ui/core';
+import { TextField, InputAdornment, IconButton } from '@material-ui/core';
 import { Visibility, VisibilityOff } from '@material-ui/icons';
 
-function Input({name, handleChange, label, half, autoFocus, type, handleShowPassword}) {
+function Input({name, handleChange, label, autoFocus, type, handleShowPassword}) {
   return (
-   <Grid item xs={12} sm={half ? 6 : 12}>
+   <div >
 
       <TextField
       id="outlined-secondary"
@@ -29,7 +29,7 @@ function Input({name, handleChange, label, half, autoFocus, type, handleShowPass
         }}
       />
 
-   </Grid>
+   </div>
   );
 }
 
