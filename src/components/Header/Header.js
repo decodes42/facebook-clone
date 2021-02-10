@@ -1,6 +1,6 @@
 import React from "react"
 import './Header.css';
-import { useStateValue } from '../../../StateProvider'
+import { useStateValue } from '../../StateProvider'
 import Toggle from './Toggle/Toggle'
 
 // Icons
@@ -18,8 +18,8 @@ import { Avatar, Button } from '@material-ui/core';
 // import { set } from "mongoose";
 
 function Header() {
-    const [{user}, dispatch] = useStateValue()
-    const [open, setOpen] = useStateValue(false);
+    // const [{user}, dispatch] = useStateValue()
+    // const [open, setOpen] = useStateValue(false);
 
     return (
         <div className="header">

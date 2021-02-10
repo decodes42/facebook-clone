@@ -1,29 +1,15 @@
 import React from 'react'
-import './Login.css'
+import './Main.css'
 import logo from '../../logo.svg'
 import { Typography } from '@material-ui/core';
-import { auth, provider } from '../../firebase'
+// import { auth, provider } from '../../firebase'
 import { Button } from '@material-ui/core'
 import { useStateValue } from '../../StateProvider'
-import { actionTypes } from '../../reducer'
 
-import Auth from '../Auth/Auth'
+import Auth from '../../components/Auth/Auth'
 
-function Login() {
-    //  Hook
-    // const [state, dispatch] = useStateValue();
+function Main() {
 
-    // const signIn = () => {
-    //     // Sign in..
-    //     auth.signInWithPopup(provider)
-    //     .then(result => {
-    //         dispatch({
-    //             type: actionTypes.SET_USER,
-    //             user: result.user
-    //         })
-
-    //     }).catch((error) => alert(error.message))
-    // }
 
     return (
         <div className='login'>
@@ -42,4 +28,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Main

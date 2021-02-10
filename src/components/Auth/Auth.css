@@ -1,33 +1,33 @@
 .register__form {
-   width: 40%;
-   text-align: center;
+    width: 40%;
+    text-align: center;
 
-}
+ }
 
-.form__title.MuiTypography-h5 {
-    margin-top: 1rem;
-  }
+ .form__title.MuiTypography-h5 {
+     margin-top: 1rem;
+   }
 
-.auth__inputs {
-    padding: 1.5rem 3rem;
-}
-.auth__inputs > div > .MuiFormControl-root {
-    margin: 0.5rem 0;
-}
-.name__inputs {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: .5rem;
-}
-button.signIn__button {
-    background-color: green;
-    padding: 1rem;
-    width: 60%;
-}
-button.switch__button {
-    background-color: gray;
-    padding: 1rem;
-    width: 60%;
-    margin: 1rem;
+ .auth__inputs {
+     padding: 1.5rem 3rem;
+ }
+ .auth__inputs > div > .MuiFormControl-root {
+     margin: 0.5rem 0;
+ }
+ .name__inputs {
+     display: flex;
+     justify-content: space-evenly;
+     margin-bottom: .5rem;
+ }
+ button.signIn__button {
+     background-color: green;
+     padding: 1rem;
+     width: 60%;
+ }
+ button.switch__button {
+     background-color: gray;
+     padding: 1rem;
+     width: 60%;
+     margin: 1rem;
 
-}
+ }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Header from './Header/Header'
-import Sidebar from './Sidebar/Sidebar'
-import Feed from './Feed/Feed'
-import Widgets from './Widgets/Widgets'
+import Header from '../../components/Header/Header'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import Feed from '../../components/Feed/Feed'
+import Widgets from '../../components/Widgets/Widgets'
 
 function Dashboard() {
     return (

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './Sidebar.css'
-import { useStateValue } from '../../../StateProvider'
+import { useStateValue } from '../../StateProvider'
 
 import SidebarRow from './SidebarRow/SidebarRow'
     import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
@@ -15,7 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChatIcon from '@material-ui/icons/Chat';
 
 function Sidebar() {
-    const [{user}, dispatch] = useStateValue()
+    // const [{user}, dispatch] = useStateValue()
     return (
         <div className="sidebar">
             <SidebarRow
